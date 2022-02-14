@@ -1,0 +1,848 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+$md: 1200px;
+$sm: 885px;
+$xm: 478px;
+body{
+    font-family: "Fredericka the Great", cursive;
+    font-family: "source Sans Pro", sans-serif;
+}
+#single-wrapper{
+    .container{
+        max-width: 1340px;
+    }
+}
+
+
+.mobile-logo-holder{
+    display: none;
+}
+
+
+.top-header{
+    padding-top: 1.0em;
+
+    
+   
+    .header-contact{
+        ul{
+            margin: auto auto;
+            li{
+                list-style-type: none;
+                font-size: 1.2em;
+                color: $secondary;
+                font-weight: 600;
+            }
+        }
+        @media(max-width: $md){
+            display: none;
+        }
+        @media(max-width: $xm){
+            display: none !important;
+        }
+    }
+    .header-brand{
+        img{
+            width: 150px;
+        }
+    }
+    .header-action{
+        a{
+            border: 2px dashed $primary;
+            border-radius: 5px;
+            color: $primary;
+            padding: 0.4em 1.8em;
+            font-size: 1.3em;
+            &:hover{
+                text-decoration: none;
+                color: white;
+                background: $primary;
+            }
+        }
+        @media(max-width: $md){
+            display: none;
+        }
+        @media(max-width: $sm){
+            display: none !important;
+        }
+    }
+    .btn-menu{
+        display: none;
+        margin: auto 0;
+        .bar{
+            width: 40px;
+            height: 2px;
+            background-color: #A3A3A3;
+            margin: 0.3em 0;
+        }
+        @media(max-width: $sm){
+            display: block;
+        }
+    }
+    @media(max-width: $sm){
+       // height: auto !important;
+    }
+}
+#wrapper-navbar{
+    z-index: 200;
+    position: relative;
+
+    #main-nav{
+        border-bottom: 1px solid #DBDBDB;
+        border-top: 1px solid #DBDBDB;
+        background: transparent;
+        @media(max-width: $sm){
+            border: none;
+        }
+        .navbar-brand{
+            display: none;
+        }
+        ul{
+            margin-left: auto !important;
+            margin-right: auto !important;
+            li{
+                a{
+                    //font-weight: 600;
+                    font-family: oswald;
+                    text-transform: uppercase;
+                    font-size: 1.5em;
+                    margin: 0 1.7em;
+
+                    @media(max-width: $md){
+                        margin: 0 1.0em;
+                    }
+                    
+                }
+                .active{
+                    color: $secondary;
+                }
+            }
+        }  
+    }
+    
+}
+
+.home-banner{
+    height: 70vh;
+    background-image: url('../img/home-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    background-color: rgba(0,0,0,0.1);
+    position: relative;
+    margin-top: -70px;
+    @media(max-width: $xm){
+        height: 50vh;
+    }
+
+    .content{
+        margin-top: 15em;
+        margin-left: 3.2em;
+        @media(max-width: $xm){
+            margin-top: 8em;
+            margin-left: unset;
+        }
+        h2{
+            color: $primary;
+            font-family: "Fredericka the Great";
+            font-size: 50px;
+            font-weight: 600;
+            @media(max-width: $xm){
+                font-size: 30px;
+            }
+        }
+        p{
+            font-family: sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+
+    .bottom-tear{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.title{
+    h2{
+        font-family: "Fredericka the Great";
+        font-size: 50px;
+        color: $primary;
+        font-weight: 600;
+        @media(max-width: $xm){
+            font-size: 30px;
+        }
+
+    }
+    h3{
+        color: $secondary;
+        font-size: 45px;
+        font-family: "Fredericka the Great";
+        margin-left: 2.5em;
+        transform: translateY(-50%);
+        font-weight: 600;
+        @media(max-width: $xm){
+            font-size: 25px;
+        }
+
+    }
+}
+
+
+.welcome{
+    margin: 1.5em 0;
+    .welcome-content{
+        font-size: 24px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 600;
+        color: $secondary;
+        @media(max-width: $xm){
+            font-size: 19px;
+            width: 98%;
+        }
+    }
+    p{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 24px;
+        @media(max-width: $xm){
+            font-size: 17px;
+            width: 98%;
+        }
+    }
+}
+
+
+.activities{
+    padding: 4.25em 0;
+
+    .activity{
+        height: 30vh;
+        background: $secondary;
+        flex: 1;
+        border-radius: 50%;
+        margin: 1.5em;
+        position: relative;
+
+        @media(max-width: $md){
+            height: 25vh;
+        }
+        @media(max-width: $sm){
+            flex: none;
+            width: 400px;
+            height: 35vh;
+        }
+        @media(max-width: $xm){
+            flex: none;
+            width: 85%;
+        }
+
+
+        .activity-img{
+            position: absolute;
+            left: 20px;top:20px;right: 20px;bottom: 20px;
+            border-radius: 50%;
+            background-image: url("../img/activity.jpg");
+            background-size: cover;
+        }
+        .title{
+            font-family: "Fredericka the Great";
+            position: absolute;
+            bottom: -30px;
+            left: 30%;
+            background: $secondary;
+            color: white;
+            padding: 1em 1.8em;
+            border: 2px dashed white;
+            @media(max-width: $md){
+                left: 20%;
+                font-size:1.1em;
+            }
+            @media(max-width: $sm){
+                left: 60%;
+                font-size: 0.9em;
+                padding: 0.5em 1.6em;
+            }
+        }
+    }
+    .activity:nth-child(2){
+        @media(max-width: $sm){
+            flex: none;
+            width: 300px;
+            float: right;
+        }
+    }
+
+}
+
+
+.news{
+    padding: 10.0em 0;
+    position: relative;
+    @media(max-width: $xm){
+        padding-bottom: 4.0em;
+    }
+    .news-bg{
+        background-image: url("../img/news-bg.jpg");
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        left: 0;
+       // opacity: 0;
+        &::before{
+            content: "";
+            height: 200px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: block;
+            position: absolute;
+            background: white
+        }
+        &::after{
+            content: "";
+            height: 200px;
+            bottom: 200px;
+            left: 0;
+            right: 0;
+            display: block;
+            position: absolute;
+            background: linear-gradient(to bottom, transparent, white);
+        }
+        
+    }
+
+    .news-img{
+        height: 50vh;
+        background-image: url("../img/news.jpg");
+        background-size: cover;
+        position: relative;
+        border-radius: 90%;
+        border: 30px solid $secondary;
+        @media(max-width: $md){
+            height: 45vh;
+        }
+        @media(max-width: $sm){
+            height: 60vh;
+        }
+        @media(max-width: $xm){
+            height: 45vh;
+        }
+        .title{
+            position: absolute;
+            background: darken($secondary,20%);
+            color: white;
+            font-family: "Fredericka the Great";
+            font-size: 20px;
+            left: 60%;
+            top: -10%;
+            padding: 0.9em 1.6em;
+            @media(max-width: $md){
+                font-size: 18px;
+                left: 50%;
+            }
+        }
+        .date{
+            position: absolute;
+            background: rgba(254,254,254,0.9);
+            color: $secondary;
+            font-family: "Fredericka the Great";
+            font-size: 20px;
+            left: 25%;
+            bottom: 0;
+            padding: 0.9em 1.6em;
+            font-weight: 600;
+            @media(max-width: $md){
+                left: 20%;
+            }
+        }
+
+
+    }
+    .content{
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        h2{
+            font-weight: 600;
+            font-size: 50px;
+        }
+        p{
+            font-size: 24px;
+        }
+        a{
+            padding: 1.1em 1.1em;
+            background: white;
+            color: $primary;
+            width: 200px;
+            
+            &:hover{
+                text-decoration: none;
+            }
+
+            i{
+                margin-left: 3.8em;
+            }
+        }
+    }
+}
+
+
+
+
+.popular-destinations{
+    padding: 4.25em 0;
+    .destination{
+        width: 335px;
+        margin: 1.5em 1em;
+        padding: 10px;
+        transition: ease 0.25s all;
+
+        @media(max-width: $sm){
+            width: 290px;
+        }
+        @media(max-width: $xm){
+            width: 400px;
+        }
+
+
+        img{
+            border-radius: 5px;
+            width: 330px;
+            height: 300px;
+        }
+        h5{
+            text-align: center;
+            font-family: sans-serif;
+            margin-top: 1.2em;
+            margin-bottom: 0.7em;
+            font-size: 24px;
+        }
+        p{
+            font-size: 20px;
+            margin-top: 1em;
+            color: $text-secondary;
+        }
+        .understrap-read-more-link{
+            display: none;
+        }
+        a{
+            text-align: center;
+            color: $text-secondary;
+            border: none;
+            border-bottom: 3px solid #ccc;
+            background-color: white !important;
+            display: block;
+            font-size: 20px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        
+
+        // &:hover{
+        //     box-shadow: 0px 5px 5px rgba(204,204,204,0.5);
+        // }
+    }
+}
+
+.subscribe{
+    padding: 8.25em 0;
+    background-image: url("../img/subscribe-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-color: #000;
+
+    .wpcf7{
+        margin: 0 !important;
+
+        form{
+            box-sizing: none;
+            input{
+                padding: 1.4em 1.8em !important;
+                width: 100%;
+                margin: 1.1em 0;
+               // padding: 1.5em 1.4em;
+                &[type="submit"]{
+                    background: $secondary;
+                    color: white;
+                    font-family:"Fredricka the Great";
+                    &:hover{
+                        //background: $secondary-300;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+.best-offers{
+    padding: 8.25em 0;
+    .offer{
+        width: 350px;
+        margin: 0.5em;
+       // border: 1px solid #f5f5f5;
+       // box-shadow: 0px 2px 8px #fafafa;
+       @media(max-width: $sm){
+        width: 290px;
+        }
+        @media(max-width: $xm){
+            width: 400px;
+        }
+
+        img{
+            border-radius: 5px;
+        }
+        .content{
+             margin: 1.2em 10px;
+            h5{
+                
+            }
+            p{
+                color: #9C9C9C;
+                i{
+                    color: $text-secondary;
+                    margin-right: 5px;
+                }
+            }
+            .category{
+                font-family: Oswald;
+                font-size: 20px;
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+                padding: 0.9em 0;
+                color: #8A8A8A;
+                text-transform: uppercase;
+            }
+            .description{
+                font-size: 20px;
+                color: $text-secondary;
+            }
+
+            a{
+                background: $white;
+                color: $secondary;
+                padding: 0.4em 1.8em;
+                font-size: 20px;
+                font-family: "Fredericka the Great";
+                border: 2px dashed $secondary;
+                
+
+                &:hover{
+                    text-decoration: none;
+                    background: $secondary;
+                    border: none;
+                    color: white;
+                }
+            }
+        }
+    }
+    .more-offers{
+        margin-top: 2.0em;
+        padding: 0.5em 1.5em;
+        border: 1px dashed $secondary;
+        color: $secondary;
+        font-family: "Fredericka the Great";
+        display: block;
+        margin: 0 auto;
+        font-size: 24px;
+        font-weight: 600;
+        @media(max-width: $xm){
+            font-size: 18px;
+            
+        }
+        &:hover{
+            text-decoration: none;
+            color: white;
+            background: $secondary;
+        }
+    }
+}
+
+
+.home-testimonials{
+    padding: 8.25em 0;
+    background-image: url("../img/testimonial-bg.jpg");
+    background-size: cover;
+}
+
+.contact-us{
+    padding:8.25em;
+  //  background-color: #222222;
+    input, textarea{
+       // padding: 1.2em 2.5em;
+        margin: 1.0em 0;
+    }
+}
+
+#wpcf7-f15-o1{
+    max-width: none !important;
+}
+
+
+
+/* ABOUT SECTION */ 
+.about-banner{
+    position: relative;
+    height: 30vh;
+    .about-banner-bg{
+        position: absolute;
+        top: 0;bottom: 0;right: 0;left: 0;
+        background-image: url('../img/about-us-banner.jpg');
+        background-size: cover;
+
+       
+        
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        height: 150px;
+        display: block;
+        background-color: white;
+        bottom: 150px;
+    }
+}
+
+.intro{
+    padding: 8.25em 0;
+    @media(max-width: $xm){
+        padding: 4.25em 0; 
+    }
+}
+
+.why-us{
+    padding: 7.25em 0;
+    background-color: #EFF3F8;
+    background-image: url("../img/starfish.jpg");
+    background-size: cover;
+    background-position: left left;
+
+    .content{
+        p{
+            font-size: 18px;
+        }
+        ul{
+            li{
+                list-style-type: none;
+                margin: 1.1em 0;
+                &::before{
+                    content: "";
+                    width: 10px;
+                    display: inline-block;
+                    height: 10px;
+                    background-color: $secondary;
+                    border-radius: 50%;
+                    margin-right: 1.2em;
+                }
+            }
+        }
+    }
+}
+
+
+.about-popular-activities{
+    padding: 9.25em;
+    @media(max-width: $xm){
+        padding: unset;
+    }
+    .popular-activity{
+        width: 300px;
+        height: 203px;
+
+        img{
+            border-radius: 20px;
+        }
+
+        .btn{
+            background: $secondary;
+            text-align: left;
+            i{
+                margin-left: 20px;
+            }
+        }
+    }
+    .first,.third{
+      border: 3px dashed $primary;
+      border-radius: 20px;
+    }
+    .second{
+        border: 3px dashed $secondary;
+        border-radius: 20px;
+        width: 400px;
+        margin-top: 1.3em;
+        height: auto;
+    }
+}
+
+
+.vacation{
+    padding: 25.25em 0;
+    position: relative;
+    @media(max-width: $xm){
+        padding: 15.25em 0; 
+    }
+    .vacation-bg{
+        background-image: url("../img/vacation-bg.jpg");
+        background-size: cover;
+        position: absolute;
+        background-position: center center;
+        top: 0;bottom:0;right: 0;left: 0;
+        filter: brightness(100%);
+
+        &::before{
+            content: "";
+            height: 300px;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: block;
+            position: absolute;
+            background: linear-gradient(to bottom, white, transparent);
+        }
+
+    }
+    .content,.title{
+        position: relative;
+        &.title{
+            margin-top: -90px;
+            h3{
+                color: white;
+            }
+        }
+        p{
+            font-family: Lora;
+            font-size: 24px;
+            color: white;
+            font-weight: 600;
+        }
+
+
+        a{
+            background: white;
+            padding: 0.8em 1.8em;
+            &:hover{
+                text-decoration: none;
+            }
+
+            i{
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+
+
+.about-socials{
+    padding: 7.25em 0;
+    .instagram{
+        .instaname{
+            h4{
+                font-family: "Fredericka the Great";
+                color: $secondary;
+            }
+        }
+    }
+}
+
+
+#wrapper-footer{
+    background: #222222;
+    color: white;
+    .last-words{
+        p{
+            font-size: 18px;
+        }
+    }
+    .footer-contact{
+        ul{
+            margin-top: 1.2em;
+            li{
+                list-style-type: none;
+                margin-top: 10px;
+
+                i{
+                    margin-right: 1.1em;
+                    color: $secondary;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*
+CONTACT PAGE
+*/
+.contact-content{
+    padding: 5.25em 0;
+    p{
+        font-size: 22px;
+    }
+    #wpcf7-f23-o1{
+        form{
+            input,textarea{
+                margin: 0.9em 0;
+            }
+        }
+    }
+    .subtitle{
+        text-align: center;
+    }
+    .phone{
+        font-size: 2.9em;
+        text-align: center;
+    }
+    .contact-address{
+        ul{
+            list-style-type: none;
+            li{
+                margin: 0.8em 0;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+
+/*    SINGLE POST   */
+.wp-post-image{
+    display: none;
+}
+.post-title{
+    font-family: "Fredericka the Great";
+    font-size: 90px;
+    color: $secondary;
+}
+.entry-content{
+    p{
+        font-size: 20px;
+        font-family: "Poppins";
+        color: #575757;
+    }
+}
+h2{
+    color: $secondary;
+    font-family: "Fredericka the Great";
+}
+
